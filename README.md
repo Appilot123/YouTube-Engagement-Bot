@@ -1,5 +1,13 @@
 <h1 align="center">YouTube Engagement Bot</h1>
 
+## Project Overview:
+This project builds a three-tiered YouTube automation system that mimics real user behavior to like and comment on videos at scale without triggering bans. It includes automated Gmail account creation, natural behavior warm-up routines, and a precision-targeted engagement bot. The key challenge here is safely managing high volumes of actions using an efficient, cost-aware proxy rotation strategy across each phase.
+
+## Core Features:
+- **Optimized Proxy Usage:** Splits tasks across rotating mobile, residential, and static proxies to balance cost with security.
+- **Realistic User Simulation:** Warm-up routines mimic browsing, searching, and light engagement to train accounts safely.
+- **Massive Scalability:** Engineered to manage and rotate up to 5,000 Gmail accounts simultaneously with intelligent IP cycling.
+
 <div align="center">
   <img
     src="https://github.com/user-attachments/assets/d200549d-7613-446f-a43b-19a4117ca360"
@@ -63,13 +71,6 @@
 
 <div align="left">
 
-## Project Overview:
-This project builds a three-tiered YouTube automation system that mimics real user behavior to like and comment on videos at scale without triggering bans. It includes automated Gmail account creation, natural behavior warm-up routines, and a precision-targeted engagement bot. The key challenge here is safely managing high volumes of actions using an efficient, cost-aware proxy rotation strategy across each phase.
-
-## Core Strengths:
-- **Optimized Proxy Usage:** Splits tasks across rotating mobile, residential, and static proxies to balance cost with security.
-- **Realistic User Simulation:** Warm-up routines mimic browsing, searching, and light engagement to train accounts safely.
-- **Massive Scalability:** Engineered to manage and rotate up to 5,000 Gmail accounts simultaneously with intelligent IP cycling.
 
 ## Features List:
 | Feature                     | Description                                                                         |
