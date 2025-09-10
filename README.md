@@ -1,104 +1,126 @@
-<h1 align="center">YouTube Engagement Bot</h1>
+# YouTube Engagement bot (Python + Selenium) — YouTube Bot for Auto-Replies, Moderation & Schedules
 
-## Project Overview:
-This project builds a three-tiered YouTube automation system that mimics real user behavior to like and comment on videos at scale without triggering bans. It includes automated Gmail account creation, natural behavior warm-up routines, and a precision-targeted engagement bot. The key challenge here is safely managing high volumes of actions using an efficient, cost-aware proxy rotation strategy across each phase.
+<p align="center">
+  <img alt="Python" src="https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white&style=for-the-badge">
+  <img alt="Selenium" src="https://img.shields.io/badge/Selenium-Automation-43B02A?logo=selenium&logoColor=white&style=for-the-badge">
+  <img alt="Multilogin" src="https://img.shields.io/badge/Multilogin-Integration-blue?style=for-the-badge">
+  <img alt="Proxies" src="https://img.shields.io/badge/Residential/Mobile-Proxies-000?style=for-the-badge">
+  <img alt="License" src="https://img.shields.io/badge/License-MIT-0a0a0a?style=for-the-badge">
+</p>
 
-## Core Features:
-- **Optimized Proxy Usage:** Splits tasks across rotating mobile, residential, and static proxies to balance cost with security.
-- **Realistic User Simulation:** Warm-up routines mimic browsing, searching, and light engagement to train accounts safely.
-- **Massive Scalability:** Engineered to manage and rotate up to 5,000 Gmail accounts simultaneously with intelligent IP cycling.
+>**YouTube engagement bot** for research/testing: realistic **search → watch** flows, optional **likes/subscribes**, **comment templates**, geo routing via **residential/mobile proxies**, and safe **profile isolation** with **Multilogin**. Built with **Python + Selenium** and designed for **policy-aware, rate-limit-safe automation**.
 
+---
+
+<p align="center">
+ <img width="1536" height="450" alt="youtube engagement bot dashboard and worker overview — youtube bot, youtube like bot, youtube chat bot flows" src="https://github.com/user-attachments/assets/5d26dc25-12fc-4f6f-a32e-8505af8abc05" />
+</p>
+
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Planned (To-Do)](#planned-to-do)
+- [Tech Stack](#tech-stack)
+- [Architecture](#architecture)
+- [Code Snapshot](#code-snapshot)
+- [Demo](#demo)
+- [Setup (Quick)](#setup-quick)
+
+---
+
+## Overview
+The **YouTube Engagement Automation Bot** uses **Python, Selenium, Multilogin APIs, and Residential/Mobile Proxies** to simulate realistic user activity (search → watch → optional like/subscribe → optional comment) with **human-like dwell/jitter** and **geo routing**.  
+All accounts are isolated in **Multilogin** profiles (cookies, fingerprints) to reduce correlation and detection risk. Ideal for **QA, workflow testing, and controlled research**.
+
+---
+
+## Features
+
+| Feature                  | Description                                                                                                       |
+|--------------------------|-------------------------------------------------------------------------------------------------------------------|
+| **Search-based Views**   | Perform keyword searches, scroll naturally, open selected results, and watch with configurable dwell ranges.      |
+| **Likes & Subscriptions**| Optional, ratio-based engagement (e.g., 10–20% like rate; 2–5% subscribe) — per profile/campaign.                |
+| **Custom Comments**      | Multi-language templates with emojis + spintax; typing delay to mimic humans.                                    |
+| **Viewing Time Control** | Flexible durations (e.g., 90–120s, up to 5 minutes) with random pauses and small seeks.                          |
+| **Playback Settings**    | Adjust speed (1×/1.25×) and quality (720p/1080p) when available.                                                 |
+| **Random Act System**    | Browse Trending, Shorts, sidebar recommendations; occasional like/dislike to break patterns.                      |
+| **Country Traffic Split**| Route activity across regions using **residential/mobile proxies** (e.g., 40% US, 30% UK…).                       |
+| **Session Isolation**    | Per-account cookies and fingerprints with **Multilogin/GoLogin** profile management.                              |
+| **Dashboard**            | Manage accounts, ratios, schedules, and geo routing; export activity logs (optional integration).                 |
+
+---
+
+### Planned (To-Do)
+- Embedded views from external platforms (Twitter, Reddit, etc.)  
+- Multi-threaded worker pool  
+- Dashboard analytics with metrics  
+- Automated proxy health checks and rotation  
+
+---
+
+## Tech Stack
+- **Python 3.10+** — core development  
+- **Selenium** — browser automation  
+- **Multilogin / GoLogin API** — profile isolation & lifecycle  
+- **Residential/Mobile Proxies** — safer geo routing  
+- **Requests + BeautifulSoup** — supporting scrapers and parsers  
+
+---
+
+## Architecture
+<img width="1024" height="520" alt="youtube Engagement bot architecture — controller, workers, multilogin profiles, proxies, youtube chat bot integrations" src="https://github.com/user-attachments/assets/34c71cb1-bbca-4281-b5d0-207a2bfc0b8b" />
+
+---
+
+## Code Snapshot
+<img width="1918" height="1008" alt="selenium youtube engagement bot code example in python — youtube like bot routines" src="https://github.com/user-attachments/assets/6d95b0e6-d442-425b-99d9-def655a38d3c" />
+
+---
+
+## Demo
 <div align="center">
-  <img
-    src="https://github.com/user-attachments/assets/d200549d-7613-446f-a43b-19a4117ca360"
-    alt="select device"
-    width="600px"
-  />
+  <video
+    src=""
+    width="85%"
+    height="50%"
+    controls
+    muted
+    playsinline
+  >
+    Your browser does not support the video tag.
+  </video>
 </div>
 
+---
 
-<div align="center">
-  <a href="https://appilot.app/">
-    <img
-      alt="Website"
-      width="25px"
-      src="https://github.com/user-attachments/assets/8e5f3af3-b098-4c1d-980d-df9aebc680d0"
-    />
-    <code>Appilot Website</code>
+## Setup (Quick)
+> **Prereqs:** Python 3.10+, Multilogin (or GoLogin) API key, residential/mobile proxies, Chrome/Chromedriver matching your Selenium version.
+
+## FAQ
+
+**Do I need Multilogin/GoLogin?**  
+Recommended. Profile isolation (cookies, fingerprints) reduces correlation across accounts and helps keep sessions stable.
+
+**How do you keep behavior human-like?**  
+Randomized dwell, scroll-depth variance, occasional pauses/seeks, delayed engagement (never instantly after page load), and small action ratios.
+
+**How do I route traffic by country?**  
+Bind profiles to residential/mobile proxies and configure `countryWeights` per campaign.
+
+---
+
+## Contact
+
+<p align="center">
+  <a href="https://discord.gg/zX7frTbx">
+    <img alt="youtube engagement bot" src="https://img.shields.io/badge/Discord-Appilot-5865F2?logo=discord&logoColor=white&style=for-the-badge">
   </a>
-  &nbsp;&nbsp;
-  <a href="https://discord.gg/3CZ5muJdF2">
-    <img
-      alt="Join Our Server"
-      width="30px"
-      src="https://github.com/Zeeshanahmad4/RealEstateMate-WhatsApp-Group-Management-Bot/blob/main/discord-icon-svgrepo-com.svg"
-    />
-    <code>Join Our Server</code>
-  </a>
-  &nbsp;&nbsp;
   <a href="https://t.me/devpilot1">
-    <img
-      alt="Contact us"
-      width="30px"
-      src="https://edent.github.io/SuperTinyIcons/images/svg/telegram.svg"
-    />
-    <code>Contact Us</code>
+    <img alt="youtube Engagement bot" src="https://img.shields.io/badge/Telegram-@devpilot1-2CA5E0?logo=telegram&logoColor=white&style=for-the-badge">
   </a>
-</div>
+</p>
 
-<div align="center">
-<strong> Have a Custom Project in Mind please Contact?</strong>
-
-<div align="center">
-  <a href="mailto:support@appilot.app">
-  <img
-    alt="Email"
-    width="30px"
-    src="https://github.com/user-attachments/assets/91c8d428-32b7-4be0-91fa-2e42c902b5b8"
-  />
-  <code>support@appilot.app</code>
-</a>
-  &nbsp;&nbsp;
-  <a href="https://cal.com/app-pilot-m8i8oo/30min">
-  <img
-    alt="Book a 30-minute Call"
-    width="30px"
-    src="https://github.com/user-attachments/assets/cd3e5c7b-3e4e-4bb3-b242-bcc20ee78f13"
-  />
-  <code>Book a 30-minute Call</code>
-</a>
-<span>
-
-<div align="left">
-
-
-## Features List:
-| Feature                     | Description                                                                         |
-| --------------------------- | ----------------------------------------------------------------------------------- |
-| Gmail Account Generator     | Automates bulk creation of Gmail accounts using rotating mobile proxies.            |
-| Warm-Up Engine              | Simulates real user behavior (searching, browsing) on Google & YouTube.             |
-| Like & Comment Automation   | Performs smart HTTP requests via SOCKS5 to like and comment without bans.           |
-| Proxy Split Strategy        | Uses mobile proxies for creation, ISP proxies for warm-up, mobile for final action. |
-| IP Rotation Logic           | Automatically switches IPs after each action to avoid fingerprint overlap.          |
-| Bandwidth-Efficient Design  | Minimizes data use during warm-up and action phases with strategic requests.        |
-| Stealth Header Emulation    | Sends varied headers and cookies to avoid detection.                                |
-| Concurrent Account Handling | Supports thousands of simultaneous active sessions with session management.         |
-| Human-like Timing           | Delays and randomness simulate human behavior at each interaction stage.            |
-| Session Fingerprinting      | Applies unique browser/device fingerprints per session for stealth.                 |
-
-
-## Key Stats:
-- **Automation Accuracy:** 98%
-- Session Stability: 24/7 uptime
-- **Concurrent Accounts:** 10,000+ supported
-- **Detection Avoidance:** 99% human-like interaction success
-- **Bandwidth Efficiency:** <100MB per 1,000 engagements
-
-
-## Technologies & Expertise:
-- **Languages/Frameworks:** Python, Puppeteer, Playwright, Node.js
-- **Platforms:** YouTube, Gmail, Google
-- **Proxies:** 4G Rotating, Residential, Static ISP (via GoLogin, Multilogin, or in-house tools)
-- **Bot Architecture:** Modular phases (Create → Warm-Up → Engage)
-- **Automation Type:** HTTP-based with browserless logic, stealth emulation
+<p align="center">
+  <img width="1536" height="300" alt="youtube Engagement bot footer banner" src="https://github.com/user-attachments/assets/e67e2131-dadf-499d-b21b-5f09bdf8d27f" />
+</p>
 
