@@ -23,7 +23,6 @@
 - [Tech Stack](#tech-stack)
 - [Architecture](#architecture)
 - [Code Snapshot](#code-snapshot)
-- [Demo](#demo)
 - [Setup (Quick)](#setup-quick)
 
 ---
@@ -74,22 +73,6 @@ All accounts are isolated in **Multilogin** profiles (cookies, fingerprints) to 
 
 ## Code Snapshot
 <img width="1918" height="1008" alt="selenium youtube engagement bot code example in python — youtube like bot routines" src="https://github.com/user-attachments/assets/6d95b0e6-d442-425b-99d9-def655a38d3c" />
-
----
-
-## Demo
-<div align="center">
-  <video
-    src=""
-    width="85%"
-    height="50%"
-    controls
-    muted
-    playsinline
-  >
-    Your browser does not support the video tag.
-  </video>
-</div>
 
 ---
 
