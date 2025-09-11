@@ -104,6 +104,6 @@ Bind profiles to residential/mobile proxies and configure `countryWeights` per c
 </p>
 
 <p align="center">
-  <img width="1536" height="300" alt="youtube Engagement bot footer banner" src="https://github.com/user-attachments/assets/e67e2131-dadf-499d-b21b-5f09bdf8d27f" />
+  <img width="1536" height="400" alt="youtube Engagement bot footer banner" src="https://github.com/user-attachments/assets/e67e2131-dadf-499d-b21b-5f09bdf8d27f" />
 </p>
 
