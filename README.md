@@ -67,7 +67,7 @@ All accounts are isolated in **Multilogin** profiles (cookies, fingerprints) to 
 ---
 
 ## Architecture
-<img width="1024" height="520" alt="youtube Engagement bot architecture — controller, workers, multilogin profiles, proxies, youtube chat bot integrations" src="https://github.com/user-attachments/assets/34c71cb1-bbca-4281-b5d0-207a2bfc0b8b" />
+<img width="1024" height="600" alt="youtube Engagement bot architecture — controller, workers, multilogin profiles, proxies, youtube chat bot integrations" src="https://github.com/user-attachments/assets/34c71cb1-bbca-4281-b5d0-207a2bfc0b8b" />
 
 ---
 
